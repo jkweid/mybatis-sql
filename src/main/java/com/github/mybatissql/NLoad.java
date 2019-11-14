@@ -1,4 +1,4 @@
-package com.github.jkweid;
+package com.github.mybatissql;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;
@@ -9,4 +9,4 @@ import java.lang.annotation.Target;
 /*该注解只能用在成员变量上*/
 @Target(ElementType.FIELD)
 @Retention(RetentionPolicy.RUNTIME)
-public @interface NotLoad {}
+public @interface NLoad {}

@@ -1,4 +1,4 @@
-package com.github.jkweid;
+package com.github.mybatissql;
 
 public enum Eways
 {
@@ -9,7 +9,6 @@ public enum Eways
     LT,//小于
     LE,//小于等于
     UP,//修改唯一列
-    TB,//字段与表名
     IN,//in
     NotIN,// not in
     EX,//exists
@@ -19,9 +18,29 @@ public enum Eways
     BH, //%两边%
     DSC,//升序
     ASC;//降序
-//    YES,//要带上WHERE
-//    NOT,//不要带上WHERE
-//    Area;//范围
+
+
+    //匹配符号
+    protected static String Sing(Eways Eways)
+    {
+        switch (Eways)
+        {
+            case EQ:return "=";
+            case NE:return "<>";
+            case GT:return ">";
+            case GE:return ">=";
+            case LT:return "<";
+            case UP:return "=";
+            case IN:return "IN";
+            case NotIN: return "NOT IN";
+            case EX:return "EXISTS";
+            case NotEx:return "NOT EXISTS";
+            case DSC:return " DESC ";
+            case ASC:return " ASC ";
+            default:
+                return "<=";
+        }
+    }
 
     private String[] Pram;
     private String Field;
@@ -47,6 +66,11 @@ public enum Eways
     public Eways Set(String Pram1, String Pram2)
     {
         this.Pram=new String[]{Pram1,Pram2};
+        return this;
+    }
+    public Eways Set(Object Obj, String Pram)
+    {
+        this.Obj=Obj;
         return this;
     }
 }

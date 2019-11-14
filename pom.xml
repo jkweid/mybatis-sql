@@ -5,10 +5,64 @@ xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xs
 
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.github.jkweid</groupId>
+    <groupId>com.github.mybatissql</groupId>
     <artifactId>mybatis-sql</artifactId>
-    <version>1.0-SNAPSHOT</version>
+    <version>1.1.1</version>
+    <packaging>jar</packaging>
 
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
+
+    <!--&lt;!&ndash;引入Sonatype官方的一个通用配置oss-parent&ndash;&gt;-->
+    <!--<parent>-->
+        <!--<groupId>org.sonatype.oss</groupId>-->
+        <!--<artifactId>oss-parent</artifactId>-->
+        <!--<version>7</version>-->
+    <!--</parent>-->
+
+
+    <!--<licenses>-->
+        <!--<license>-->
+            <!--<name>The Apache Software License, Version 2.0</name>-->
+            <!--<url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>-->
+            <!--<distribution>repo</distribution>-->
+        <!--</license>-->
+    <!--</licenses>-->
+
+    <!--&lt;!&ndash; 与申请issue时填写的SCM保持一致 &ndash;&gt;-->
+    <!--<scm>-->
+        <!--<url>https://github.com/jkweid/mybatis-sql</url>-->
+        <!--<connection>https://github.com/jkweid/mybatis-sql.git</connection>-->
+        <!--<developerConnection>https://github.com/jkweid/mybatis-sql.git</developerConnection>-->
+    <!--</scm>-->
+
+    <!--&lt;!&ndash; 根据自己实际情况填写 &ndash;&gt;-->
+    <!--<developers>-->
+        <!--<developer>-->
+            <!--<name>jkweid</name>-->
+            <!--<email>13250441774@163.com</email>-->
+        <!--</developer>-->
+    <!--</developers>-->
+
+    <!--<profiles>-->
+        <!--<profile>-->
+            <!--&lt;!&ndash; 这个id就是打包时的 -P 参数 &ndash;&gt;-->
+            <!--<id>release</id>-->
+            <!--&lt;!&ndash; snapshotRepository与repository的id应与setting.xml中添加的server的id一致 &ndash;&gt;-->
+            <!--<distributionManagement>-->
+                <!--<snapshotRepository>-->
+                    <!--<id>sonatype-qinpiyi</id>-->
+                    <!--<url>https://oss.sonatype.org/content/repositories/snapshots/</url>-->
+                <!--</snapshotRepository>-->
+                <!--<repository>-->
+                    <!--<id>sonatype-qinpiyi</id>-->
+                    <!--<url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>-->
+                <!--</repository>-->
+            <!--</distributionManagement>-->
+        <!--</profile>-->
+    <!--</profiles>-->
 
     <dependencies>
         <!-- https://mvnrepository.com/artifact/org.mybatis/mybatis -->
@@ -17,8 +71,7 @@ xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xs
             <artifactId>mybatis</artifactId>
             <version>3.4.6</version>
         </dependency>
-
-
     </dependencies>
+
 
 </project>
